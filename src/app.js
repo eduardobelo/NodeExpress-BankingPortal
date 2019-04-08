@@ -24,4 +24,5 @@ app.get('/profile', (req, res) => {
     res.render('profile', { user: users[0] });
 });
 
-app.listen(process.env.PORT || 3000, () => console.log('PS Project Running on port 3000!'));
+const port = process.env.PORT || 3000 ;
+app.listen( port , () => console.log('PS Project Running on port 3000!'));
