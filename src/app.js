@@ -16,8 +16,10 @@ app.use(express.urlencoded({extended: true}));
 app.get('/', (req, res) => {
     res.render('index', {title:'Account Summary', accounts });
 });
+
 app.use('/account', accountRoutes);
 app.use('/services', serviceRoutes);
+
 app.get('/profile', (req, res) => {
     res.render('profile', { user: users[0] });
 });
